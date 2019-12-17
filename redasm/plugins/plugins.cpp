@@ -27,6 +27,7 @@
 //#include ASSEMBLER_PLUGIN(arm64)
 #include ASSEMBLER_PLUGIN(avr8)
 #include ASSEMBLER_PLUGIN(chip8)
+#include ASSEMBLER_PLUGIN(mos6502)
 
 #define REGISTER_LOADER_PLUGIN(id)                REDasm::Plugins::loaders.push_front(LOADER_PLUGIN_ENTRY(id)); Plugins::loadersCount++
 #define REGISTER_ASSEMBLER_PLUGIN(id)             REDasm::Plugins::assemblers[#id] = ASSEMBLER_PLUGIN_ENTRY(id)
@@ -97,6 +98,7 @@ void init(const ContextSettings& settings)
     REGISTER_ASSEMBLER_PLUGIN(cil);
     REGISTER_ASSEMBLER_PLUGIN(avr8);
     REGISTER_ASSEMBLER_PLUGIN(chip8);
+    REGISTER_ASSEMBLER_PLUGIN(mos6502);
 }
 
 const AssemblerPlugin_Entry *getAssembler(const std::string& id)

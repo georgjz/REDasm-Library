@@ -2,6 +2,8 @@
 
 #include "mos6502.h"
 
+namespace REDasm {
+
 Mos6502Assembler::Mos6502Assembler(): AssemblerPlugin()
 {
     /* 
@@ -26,4 +28,6 @@ bool CustomAssembler::decodeInstruction(const BufferView& view, const Instructio
 void Mos6502Assembler::onDecoded(const InstructionPtr& instruction) const
 {
     // Post decoding code: operand definition, instruction type, etc...
+}
+
 }

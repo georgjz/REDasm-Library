@@ -3,6 +3,8 @@
 #include "../../plugins/plugins.h" // Import AssemblerPlugin
 #include "../../support/dispatcher.h"
 
+namespace REDasm {
+
 class Mos6502Assembler: public AssemblerPlugin
 {
     public:
@@ -18,3 +20,5 @@ class Mos6502Assembler: public AssemblerPlugin
 };
 
 DECLARE_ASSEMBLER_PLUGIN(Mos6502Assembler, mos6502) // Declare the plugin with id: CustomAssembler=customasm
+
+}
